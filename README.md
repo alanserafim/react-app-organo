@@ -10,13 +10,22 @@ link: <a href="https://www.figma.com/file/T6BLI1HfB81eYOiVgpqQz7/Projeto-Intro-a
 A partir do figma seguiremos a bordagem top-down
 > Começando pelo top da página
 
-| N. | Componente | 
-|--- |--- |
-| 1 | Banner | 
-| 2 | Input | 
-| 3 | Formulário | 
-| n | componente | 
-| n | componente | 
-| n | componente | 
+| N. | Componente | Conceito trabalho |
+|--- |--- |---
+| 1 | Banner | function componentes
+| 2 | Campo Texto | estilização
+| 3 | Formulário | props
+| 4 | Campo Select | map
+| 5 | Botão | data binding
+| 6 | componente | conceito
+| 7 | componente | conceito
+| 8 | componente | conceito
 
 
+### Estrutura
+
+Function componentes declarados em arrow functions e identificados por constantes. Cada componente possui: 
+
+1. Diretório próprio
+2. Arquivo index.js
+3. Arquivo Component.css
