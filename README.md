@@ -17,14 +17,14 @@ A partir do figma seguiremos a bordagem top-down
 | 3 | Formulário | props
 | 4 | Campo Select | map
 | 5 | Botão | data binding
-| 6 | componente | conceito
+| 6 | Lógica do Formulário | useState, OnChage
 | 7 | componente | conceito
 | 8 | componente | conceito
 
 
 ### Estrutura
 
-Function componentes declarados em arrow functions e identificados por constantes. Cada componente possui: 
+Function components declarados em arrow functions e identificados por constantes. Cada componente possui: 
 
 1. Diretório próprio
 2. Arquivo index.js
