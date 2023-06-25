@@ -18,7 +18,7 @@ A partir do figma seguiremos a bordagem top-down
 | 4 | Campo Select | map
 | 5 | Botão | data binding
 | 6 | Lógica do Formulário | useState, OnChage
-| 7 | componente | conceito
+| 7 | TimeContainer | dumb components, recebendo css via js
 | 8 | componente | conceito
 
 
