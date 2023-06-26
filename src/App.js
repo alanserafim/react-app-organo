@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner/Banner';
 import Formulario from './components/Formulario';
 import Time from './components/Time';
+import Rodape from './components/Rodape.css';
 
 
 function App() {
@@ -56,15 +57,24 @@ function App() {
   return (
     <div>
        <Banner/>  
-      <Formulario aoColaboradorCadastrado={ colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+      <Formulario 
+        times={times.map( time => time.nome)} 
+        aoColaboradorCadastrado={ colaborador => aoNovoColaboradorAdicionado(colaborador)}
+        />
       {
         times.map((time)=>{
           return(
-            <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>
+            <Time 
+              key={time.nome} 
+              nome={time.nome} 
+              corPrimaria={time.corPrimaria} 
+              corSecundaria={time.corSecundaria}
+              colaboradores={colaboradores.filter( colaborador => colaborador.time === time.nome)}
+              />
           )
         })
       }
-
+      <Rodape/>
     </div>
   );
 }
