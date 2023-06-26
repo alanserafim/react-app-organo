@@ -2,6 +2,7 @@ import './Banner.css'
 
 export default function Banner(){
     return(
+        <>
         <header className='banner'>
             <img 
                 src="/img/banner.png" 
@@ -9,5 +10,6 @@ export default function Banner(){
                 juntando as mãos, o nome da empresa Organo e a frase: pessoas e times 
                 organizados em um só lugar"/>
         </header>
+        </>
     )
 }

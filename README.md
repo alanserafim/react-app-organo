@@ -19,7 +19,7 @@ A partir do figma seguiremos a bordagem top-down
 | 5 | Botão | data binding
 | 6 | Lógica do Formulário | useState, OnChage
 | 7 | TimeContainer | dumb components, recebendo css via js
-| 8 | Time | filter, renderização condicional
+| 8 | Time | filter, renderização condicional, debugger
 
 
 ### Estrutura
