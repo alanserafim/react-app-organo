@@ -21,7 +21,7 @@ A partir do figma seguiremos a bordagem top-down
 | 7 | TimeContainer | dumb components, recebendo css via js
 | 8 | Time | filter, renderização condicional, debugger
 | 9 | DeletaColaborador | closures, props, funcionamento interno, ícones
-|10 | Componente | Conceito trabalho
+|10 | InputCor | Inputs controlados, Virtual DOM, imperatividade, declaratividade
 |11 | Componente | Conceito trabalho
 |12 | Componente | Conceito trabalho
 |13 | Componente | Conceito trabalho

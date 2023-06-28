@@ -7,43 +7,36 @@ import Rodape from './components/Rodape.css';
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: "Programação",
-      corPrimaria: "#d9f7e9",
-      corSecundaria: "#57c278",
+      cor: "#d9f7e9",
     },
     {
       nome: "Front-End",
-      corPrimaria: "#82CFFA",
-      corSecundaria: "#E8F8FF",
+      cor: "#82CFFA",
     },
     {
       nome: "Data Science",
-      corPrimaria: "#A6D157",
-      corSecundaria: "#F0F8E2",
+      cor: "#A6D157",
     },
     {
       nome: "Devops",
-      corPrimaria: "#E06B69",
-      corSecundaria: "#FDE7E8",
+      cor: "#E06B69",
     },
     {
       nome: "Ux e Design",
-      corPrimaria: "#DB6EBF",
-      corSecundaria: "#FAE9F5",
+      cor: "#DB6EBF",
     },
     {
       nome: "Mobile",
-      corPrimaria: "#FFBA05",
-      corSecundaria: "#FFF5D9",
+      cor: "#FFBA05",
     },
     {
       nome: "Inovação e Gestão",
-      corPrimaria: "#FF8A29",
-      corSecundaria: "#FFEEDF",
+      cor: "#FF8A29",
     }
-  ]
+  ])
 
   const inicial = [
     {
@@ -202,6 +195,15 @@ function App() {
     console.log("deletar chamado");
   }
 
+  const mudarCorTime = (cor, nome) => {
+      setTimes(times.map(time => {
+        if(time.nome === nome) {
+          time.cor = cor;
+        }
+        return time
+      }));
+  }
+
   return (
     <div>
        <Banner/>  
@@ -212,11 +214,11 @@ function App() {
       {
         times.map((time)=>{
           return(
-            <Time 
+            <Time
+              mudarCor={mudarCorTime}
               key={time.nome} 
               nome={time.nome} 
-              corPrimaria={time.corPrimaria} 
-              corSecundaria={time.corSecundaria}
+              cor={time.cor} 
               colaboradores={colaboradores.filter( colaborador => colaborador.time === time.nome)}
               aoDeletar={deletaColaborador}
               />
