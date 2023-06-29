@@ -14,7 +14,7 @@ const ListaSuspensa = (props) => {
         <option value="">Selecione</option>
         {props.itens.map((item) => {
           return (
-            <option key={item}>{item}</option>
+            <option key={item.id} value={item.id}>{item.nome}</option>
           )
         })}
       </select>
