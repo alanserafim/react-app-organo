@@ -22,7 +22,7 @@ A partir do figma seguiremos a bordagem top-down
 | 8 | Time | filter, renderização condicional, debugger
 | 9 | DeletaColaborador | closures, props, funcionamento interno, ícones
 |10 | InputCor | Inputs controlados, Virtual DOM, imperatividade, declaratividade
-|11 | Componente | Conceito trabalho
+|11 | Refatoração | ID com UUID, One Way Data Binding, funções como parâmetros
 |12 | Componente | Conceito trabalho
 |13 | Componente | Conceito trabalho
 |14 | Componente | Conceito trabalho
