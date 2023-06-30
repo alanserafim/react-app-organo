@@ -91,7 +91,7 @@ function App() {
       id: uuidv4(),
       favorito: false,
       nome: 'ALAN SERAFIM',
-      cargo: 'Agente de Tecnologia no Banco do Brasil',
+      cargo: 'Desenvolvedor de Software SPRING | Angular',
       imagem: 'https://github.com/alanserafim.png',
       time: times[1].id
     },
@@ -123,7 +123,7 @@ function App() {
       id: uuidv4(),
       favorito: false,
       nome: 'ALAN SERAFIM',
-      cargo: 'Desenvolvedor Full Stack',
+      cargo: 'Desenvolvedor de Software React | NODE.js',
       imagem: 'https://github.com/alanserafim.png',
       time: times[2].id
     },
@@ -155,7 +155,7 @@ function App() {
       id: uuidv4(),
       favorito: false,
       nome: 'ALAN SERAFIM',
-      cargo: 'Agente de Tecnologia no Banco do Brasil',
+      cargo: 'Desenvolvedor Fullstack',
       imagem: 'https://github.com/alanserafim.png',
       time: times[3].id
     },
@@ -219,7 +219,7 @@ function App() {
       id: uuidv4(),
       favorito: false,
       nome: 'ALAN SERAFIM',
-      cargo: 'Dev Junior',
+      cargo: 'DevOps',
       imagem: 'https://github.com/alanserafim.png',
       time: times[5].id
     },
