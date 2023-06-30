@@ -1,11 +1,11 @@
 # Organo - app de organogramas
 
 ## Link do Projeto
-Acesse aqui: <a href="https://alanserafim-react-organo.vercel.app">ORGANO</a>
+Acesse aqui: <a href="https://alanserafim-react-organo.vercel.app" target="_blank">ORGANO</a>
 
 ## Figma do projeto
 
-Acesse aqui: <a href="https://www.figma.com/file/T6BLI1HfB81eYOiVgpqQz7/Projeto-Intro-ao-React?type=design&node-id=134-128&t=vGRD7ytzutui9BpO-0"> Style Guide, Wireframes, Mockups </a>
+Acesse aqui: <a href="https://www.figma.com/file/T6BLI1HfB81eYOiVgpqQz7/Projeto-Intro-ao-React?type=design&node-id=134-128&t=vGRD7ytzutui9BpO-0" target="_blank"> Style Guide, Wireframes, Mockups </a>
 
 ### Abordagem de desenvolvimento
 
