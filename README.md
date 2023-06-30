@@ -10,7 +10,7 @@ Acesse aqui: <a href="https://www.figma.com/file/T6BLI1HfB81eYOiVgpqQz7/Projeto-
 ### Abordagem de desenvolvimento
 
 A partir do figma seguiremos a bordagem top-down
-> Começando pelo top da página
+> Começando pelo topo da página
 
 | N. | Componente | Conceito trabalho |
 |--- |--- |---
@@ -24,7 +24,7 @@ A partir do figma seguiremos a bordagem top-down
 | 8 | Time | filter, renderização condicional, debugger
 | 9 | DeletaColaborador | closures, props, funcionamento interno, ícones
 |10 | InputCor | Inputs controlados, Virtual DOM, imperatividade, declaratividade
-|11 | Refatoração | ID com UUID, One Way Data Binding, funções como parâmetros
+|11 | Refatoração | ID únicos com UUID, One Way Data Binding, funções como parâmetros
 
 
 ### Estrutura
