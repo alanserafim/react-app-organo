@@ -4,6 +4,7 @@ import Formulario from './components/Formulario';
 import Time from './components/Time';
 import Rodape from './components/Rodape.css';
 import { v4 as uuidv4 } from 'uuid';
+import './App.css'
 
 function App() {
 
@@ -273,13 +274,17 @@ function App() {
   }
 
   return (
-    <div>
-       <Banner/>  
+    <div className='app'>
+       <Banner/> 
       <Formulario 
         cadastrarTime={cadastrarTime}
         times={times} 
         aoColaboradorCadastrado={ colaborador => aoNovoColaboradorAdicionado(colaborador)}
       />
+      <div className='organizacao'>
+        <h2 className='titulo'>Minha Organização</h2>
+      </div>
+      
       {
         times.map((time, indice)=>{
           return(

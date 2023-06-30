@@ -5,13 +5,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer ul li {
     display: inline-block;
     margin-right: 32px;
+    
 }
 
 .footer ul li:last-child {
     margin-right: 0;
+}
+
+.footer section {
+    margin: auto;
 }

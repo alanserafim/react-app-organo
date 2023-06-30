@@ -1,0 +1,13 @@
+.app .organizacao {
+    text-align: center;
+}
+
+.app .titulo {
+    font-size: 40px;
+    line-height: 72px;
+    border-bottom: 4px solid;
+    padding-bottom: 8px;
+    margin-bottom: 72px;
+    display: inline-block;
+    color: #6278F7;
+}
