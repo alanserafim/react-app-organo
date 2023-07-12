@@ -12,7 +12,7 @@ Acesse aqui: <a href="https://www.figma.com/file/T6BLI1HfB81eYOiVgpqQz7/Projeto-
 A partir do figma seguiremos a bordagem top-down
 > Começando pelo topo da página
 
-| N. | Componente | Conceito trabalho |
+| N. | Componente | Conceito trabalhado |
 |--- |--- |---
 | 1 | Banner | function componentes
 | 2 | Campo Texto | estilização
@@ -34,3 +34,10 @@ Function components declarados em arrow functions e identificados por constantes
 1. Diretório próprio
 2. Arquivo index.js
 3. Arquivo Component.css
+
+### Migrando para o Typescript
+
+| N. | Conceito trabalhado 
+|--- |--- 
+| 1 | instalando dependencias necessários para iniciar a migração de um projeto React de JS para TS, Gerar o tsconfig.json a partir do script npx, Diferenciar arquivos js, jsx, ts e tsx.
+
