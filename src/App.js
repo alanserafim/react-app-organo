@@ -5,6 +5,7 @@ import Time from './components/Time';
 import Rodape from './components/Rodape.css';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css'
+import botaoEsconder from './components/Formulario/botao.png'
 
 function App() {
 
@@ -242,6 +243,7 @@ function App() {
   ]
 
   const [colaboradores, setColaboradores] = useState(inicial)
+  const [visibilidadeForm, setVisibilidadeForm] = useState(true)
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador])
@@ -252,22 +254,22 @@ function App() {
   }
 
   const mudarCorTime = (cor, id) => {
-      setTimes(times.map(time => {
-        if(time.id === id) {
-          time.cor = cor;
-        }
-        return time
-      }));
+    setTimes(times.map(time => {
+      if (time.id === id) {
+        time.cor = cor;
+      }
+      return time
+    }));
   }
 
   const cadastrarTime = (novoTime) => {
-    setTimes([...times, {...novoTime, id: uuidv4()}])
+    setTimes([...times, { ...novoTime, id: uuidv4() }])
   }
 
-  function resolverFavorito(id){
+  function resolverFavorito(id) {
     setColaboradores(colaboradores.map(colaborador => {
-      if(colaborador.id === id) {
-        colaborador.favorito =  !colaborador.favorito
+      if (colaborador.id === id) {
+        colaborador.favorito = !colaborador.favorito
       }
       return colaborador
     }))
@@ -275,31 +277,45 @@ function App() {
 
   return (
     <div className='app'>
-       <Banner/> 
-      <Formulario 
+      <Banner />
+
+      {visibilidadeForm ? <Formulario
         cadastrarTime={cadastrarTime}
-        times={times} 
-        aoColaboradorCadastrado={ colaborador => aoNovoColaboradorAdicionado(colaborador)}
-      />
+        times={times}
+        aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
+      /> : ""}
       <div className='organizacao'>
-        <h2 className='titulo'>Minha Organização</h2>
+        <div className='titulo__container'>
+          <h2 className='titulo'>Minha Organização</h2>
+        </div>
+        <div className='botao__container'>
+          <button
+            className="botaoEsconder"
+            onClick={() => setVisibilidadeForm(!visibilidadeForm)}
+          >
+            <img
+              src={botaoEsconder}
+              alt='Botao esconder formulário'
+            />
+          </button>
+        </div>
       </div>
-      
+
       {
-        times.map((time, indice)=>{
-          return(
+        times.map((time, indice) => {
+          return (
             <Time
               mudarCor={mudarCorTime}
               key={indice}
-              time={time} 
-              colaboradores={colaboradores.filter( colaborador => colaborador.time === time.id)}
+              time={time}
+              colaboradores={colaboradores.filter(colaborador => colaborador.time === time.id)}
               aoDeletar={deletaColaborador}
               aoFavoritar={resolverFavorito}
-              />
+            />
           )
         })
       }
-      <Rodape/>
+      <Rodape />
     </div>
   );
 }
