@@ -1,11 +1,21 @@
 import "./Campo.css"
+import React from 'react'
 
-const Campo  = ({type = 'text', label, placeholder, valor, aoAlterado, obrigatorio}) => {
+interface CampoProps {
+    type: string,
+    label: string,
+    placeholder: string,
+    valor: any,
+    obrigatorio : boolean,
+    aoAlterado: (valor: string) => void
+}
+
+const Campo  = ({type = 'text', label, placeholder, valor, aoAlterado, obrigatorio}: CampoProps) => {
 
     const placeholderModificada = `${placeholder}...`
     // const textoMin = texto.toLowerCase(); 
 
-    const aoDigitado = (evento) =>{ 
+    const aoDigitado = (evento : React.ChangeEvent<HTMLInputElement>) =>{ 
         //setValor(evento.target.value)   
         aoAlterado(evento.target.value)
     }
