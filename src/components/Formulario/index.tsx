@@ -3,8 +3,17 @@ import Campo from '../Campo';
 import ListaSuspensa from '../ListaSuspensa';
 import Botao from '../Botao';
 import { useState } from 'react';
+import { ITime } from '../../shared/interfaces/ITime';
+import { IColaborador } from '../../shared/interfaces/IColaborador';
 
-const Formulario = (props) => {
+interface FormularioProps {
+    aoColaboradorCadastrado: (colaborador: IColaborador) => void, 
+    cadastrarTime: (time: ITime) => void, 
+    times: ITime[]
+
+}
+
+const Formulario = ({ aoColaboradorCadastrado, cadastrarTime, times}: FormularioProps) => {
   
     const [nome, setNome] = useState("")
     const [cargo, setCargo] = useState("");
@@ -13,9 +22,9 @@ const Formulario = (props) => {
     const [nomeTime, setNomeTime] = useState("");
     const [corTime, setCorTime] = useState("");
 
-    const aoSalvar = (evento) => {
+    const aoSalvar = (evento: any ) => {
         evento.preventDefault();
-        props.aoColaboradorCadastrado({
+        aoColaboradorCadastrado({
             nome, 
             cargo,
             imagem,
@@ -27,9 +36,11 @@ const Formulario = (props) => {
         setTime('')
     }
 
-    const aoCadastrarTime = (evento) => {
+    const aoCadastrarTime = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault()
-        props.cadastrarTime({ nome: nomeTime, cor: corTime })
+        cadastrarTime({ nome: nomeTime, cor: corTime })
+        setNomeTime("")
+        setCorTime("")
     }
 
 
@@ -60,14 +71,16 @@ const Formulario = (props) => {
                 <ListaSuspensa 
                     obrigatorio={true} 
                     label="Time" 
-                    itens={props.times}
-                    valor={time.id}
+                    itens={times}
+                    valor={time}
                     aoAlterado={ valor => setTime(valor) }
                 />
                 <Botao>
                     Criar Card
                 </Botao>
             </form>
+
+
             <form onSubmit={aoCadastrarTime}>
                 <h2>Preencha os dados para criar um novo time</h2>
                 <Campo 

@@ -41,3 +41,4 @@ Function components declarados em arrow functions e identificados por constantes
 |--- |--- 
 | 1 | instalando dependencias necessários para iniciar a migração de um projeto React de JS para TS, Gerar o tsconfig.json a partir do script npx, Diferenciar arquivos js, jsx, ts e tsx.
 | 2 | Configurar o jsx no tsconfig.json, Configurar o jsx no tsconfig.json, Inferir os tipos de variáveis geradas pela desconstrução das props
+| 3 | Criar interfaces, Entender a diferença entre type e Interface, Configurar propriedades opcionais nas interfaces, Tipar funções

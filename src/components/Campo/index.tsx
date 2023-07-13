@@ -2,15 +2,15 @@ import "./Campo.css"
 import React from 'react'
 
 interface CampoProps {
-    type: string,
+    type?: string,
     label: string,
     placeholder: string,
     valor: any,
-    obrigatorio : boolean,
-    aoAlterado: (valor: string) => void
+    obrigatorio?: boolean,
+    aoAlterado: (valor: any) => void
 }
 
-const Campo  = ({type = 'text', label, placeholder, valor, aoAlterado, obrigatorio}: CampoProps) => {
+const Campo  = ({type = "text", label, placeholder, valor, aoAlterado, obrigatorio = false}: CampoProps) => {
 
     const placeholderModificada = `${placeholder}...`
     // const textoMin = texto.toLowerCase(); 
