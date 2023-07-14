@@ -11,6 +11,7 @@ interface ListaSuspensaProps {
 }
 
 const ListaSuspensa = ({ label, aoAlterado, obrigatorio, valor, itens}: ListaSuspensaProps) => {
+  
   return (
     <div className="lista-suspensa">
       <label>{label}</label>

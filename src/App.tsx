@@ -254,11 +254,11 @@ function App() {
     setColaboradores([...colaboradores, colaborador])
   }
 
-  const deletaColaborador = (id: any): void => {
+  const deletaColaborador = (id: string): void => {
     setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
   }
 
-  const mudarCorTime = (cor: any, id: any): void => {
+  const mudarCorTime = (cor: string, id: string): void => {
     setTimes(times.map(time => {
       if (time.id === id) {
         time.cor = cor;
@@ -271,7 +271,7 @@ function App() {
     setTimes([...times, { ...novoTime, id: uuidv4() }])
   }
 
-  function resolverFavorito(id: any): any {
+  function resolverFavorito(id: string): void {
     setColaboradores(colaboradores.map(colaborador => {
       if (colaborador.id === id) {
         colaborador.favorito = !colaborador.favorito

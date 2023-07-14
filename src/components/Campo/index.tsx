@@ -2,12 +2,12 @@ import "./Campo.css"
 import React from 'react'
 
 interface CampoProps {
-    type?: string,
+    type?: 'text' | "color" | "passsword" | "date" | "email" | "number",
     label: string,
     placeholder: string,
-    valor: any,
+    valor: string,
     obrigatorio?: boolean,
-    aoAlterado: (valor: any) => void
+    aoAlterado: (valor: string) => void
 }
 
 const Campo  = ({type = "text", label, placeholder, valor, aoAlterado, obrigatorio = false}: CampoProps) => {

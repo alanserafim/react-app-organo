@@ -15,6 +15,7 @@ interface FormularioProps {
 }
 
 const Formulario = ({ aoColaboradorCadastrado, cadastrarTime, times}: FormularioProps) => {
+    const { v4: uuidv4 } = require('uuid');
   
     const [nome, setNome] = useState("")
     const [cargo, setCargo] = useState("");
@@ -23,9 +24,10 @@ const Formulario = ({ aoColaboradorCadastrado, cadastrarTime, times}: Formulario
     const [nomeTime, setNomeTime] = useState("");
     const [corTime, setCorTime] = useState("");
 
-    const aoSalvar = (evento: any ) => {
+    const aoSalvar = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault();
         aoColaboradorCadastrado({
+            id: uuidv4(),
             nome, 
             cargo,
             imagem,
@@ -39,7 +41,7 @@ const Formulario = ({ aoColaboradorCadastrado, cadastrarTime, times}: Formulario
 
     const aoCadastrarTime = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault()
-        cadastrarTime({ nome: nomeTime, cor: corTime })
+        cadastrarTime({ id: uuidv4(), nome: nomeTime, cor: corTime })
         setNomeTime("")
         setCorTime("")
     }

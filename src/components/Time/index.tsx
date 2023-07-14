@@ -8,9 +8,9 @@ import React from 'react';
 interface TimeProps {
     time: ITime,
     colaboradores: IColaborador[]
-    aoDeletar: (id :any) => void
-    mudarCor: (evento: string, id: number) => void
-    aoFavoritar: (id: any) => any
+    aoDeletar: (id: string) => void
+    mudarCor: (evento: string, id: string) => void
+    aoFavoritar: (id: string) => void
 }
 
 const Time = ({ time, colaboradores, aoDeletar, mudarCor, aoFavoritar}:TimeProps) => {
