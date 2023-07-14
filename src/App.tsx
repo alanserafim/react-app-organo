@@ -3,11 +3,16 @@ import Banner from './components/Banner';
 import Formulario from './components/Formulario';
 import Time from './components/Time';
 import Rodape from './components/Rodape.css';
-import { v4 as uuidv4 } from 'uuid';
+// import {v4 as uuidv4} from 'uuid';
 import './App.css'
-import botaoEsconder from './components/Formulario/botao.png'
+import botaoEsconder from './components/Botao/botao.png'
+import { IColaborador } from './shared/interfaces/IColaborador';
+import { ITime } from './shared/interfaces/ITime';
+import React from 'react';
 
 function App() {
+
+  const { v4: uuidv4 } = require('uuid');
 
   const [times, setTimes] = useState([
     {
@@ -242,18 +247,18 @@ function App() {
     },
   ]
 
-  const [colaboradores, setColaboradores] = useState(inicial)
+  const [colaboradores, setColaboradores] = useState<IColaborador[]>(inicial)
   const [visibilidadeForm, setVisibilidadeForm] = useState(true)
 
-  const aoNovoColaboradorAdicionado = (colaborador) => {
+  const aoNovoColaboradorAdicionado = (colaborador: IColaborador) => {
     setColaboradores([...colaboradores, colaborador])
   }
 
-  const deletaColaborador = (id) => {
+  const deletaColaborador = (id: any): void => {
     setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
   }
 
-  const mudarCorTime = (cor, id) => {
+  const mudarCorTime = (cor: any, id: any): void => {
     setTimes(times.map(time => {
       if (time.id === id) {
         time.cor = cor;
@@ -262,11 +267,11 @@ function App() {
     }));
   }
 
-  const cadastrarTime = (novoTime) => {
+  const cadastrarTime = (novoTime: ITime) => {
     setTimes([...times, { ...novoTime, id: uuidv4() }])
   }
 
-  function resolverFavorito(id) {
+  function resolverFavorito(id: any): any {
     setColaboradores(colaboradores.map(colaborador => {
       if (colaborador.id === id) {
         colaborador.favorito = !colaborador.favorito
@@ -283,7 +288,7 @@ function App() {
         cadastrarTime={cadastrarTime}
         times={times}
         aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
-      /> : ""}
+      /> : <></>}
       <div className='organizacao'>
         <div className='titulo__container'>
           <h2 className='titulo'>Minha Organização</h2>

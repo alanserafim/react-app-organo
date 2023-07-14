@@ -7,9 +7,9 @@ import { IColaborador } from '../../shared/interfaces/IColaborador';
 interface TimeProps {
     time: ITime,
     colaboradores: IColaborador[]
-    aoDeletar: () => void
+    aoDeletar: (id :any) => void
     mudarCor: (evento: string, id: number) => void
-    aoFavoritar: () => void
+    aoFavoritar: (id: any) => any
 }
 
 const Time = ({ time, colaboradores, aoDeletar, mudarCor, aoFavoritar}:TimeProps) => {

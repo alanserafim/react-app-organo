@@ -6,7 +6,7 @@ interface ColaboradorProps {
     colaborador : IColaborador
     corFundo: string, 
     aoDeletar: (id: any) => void
-    aoFavoritar: (id: any) => void
+    aoFavoritar: (id: any) => any
 }
 
 const Colaborador = ({ colaborador, corFundo, aoDeletar, aoFavoritar }: ColaboradorProps) => {
