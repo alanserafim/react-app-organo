@@ -3,6 +3,7 @@ import hexToRgba from 'hex-to-rgba';
 import './Time.css'
 import { ITime } from '../../shared/interfaces/ITime';
 import { IColaborador } from '../../shared/interfaces/IColaborador';
+import React from 'react';
 
 interface TimeProps {
     time: ITime,

@@ -1,3 +1,4 @@
+import React from "react";
 import { ITime } from "../../shared/interfaces/ITime";
 import "./ListaSuspensa.css";
 

@@ -5,6 +5,7 @@ import Botao from '../Botao';
 import { useState } from 'react';
 import { ITime } from '../../shared/interfaces/ITime';
 import { IColaborador } from '../../shared/interfaces/IColaborador';
+import React from 'react';
 
 interface FormularioProps {
     aoColaboradorCadastrado: (colaborador: IColaborador) => void, 
